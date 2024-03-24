@@ -61,7 +61,7 @@ const Login = () => {
                     <p className='text-center'>Contrasena</p>
                     <input className='form-control' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-                    <p className='text-center' ><a href="/register">Registrate aca</a></p>
+                    <p className='text-center' ><a onClick={navigate('/register')}>Registrate aca</a></p>
                     <hr />
                     <div className="d-grid gap-2">
 
