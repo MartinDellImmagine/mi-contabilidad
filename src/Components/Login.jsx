@@ -50,30 +50,25 @@ const Login = () => {
     return (
         <>
     
-        <div className='container mt-5'>
-            <div className='contianer'>
-                
-           
-                <div className='container'>
-                        
-                <form className='container'>
-                <div>
-                    <h2 className='text-center'>Iniciar sesión</h2>
-                    <div>
-                        <label>Email:</label>
-                        <input className='form-control' type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    </div>
-                    <div>
-                        <label>Contraseña:</label>
-                        <input className='form-control' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    </div>
+        <div className='container mt-5 d-flex justify-content-center align-items-center sm'>
+ 
+                <form className='card'  style={{ width: '32rem', height: '30rem' }}>
+                <div className="card-body">
+                    <p className='text-center'>Email</p>
+                    <input className='form-control p-1' type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  
                    
-                    <button className='btn btn-primary my-2' onClick={handleSignIn}>Iniciar sesión</button>
-                    {error && <div>{error}</div>}
+                    <p className='text-center'>Contrasena</p>
+                    <input className='form-control' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+
+                    <p className='text-center' ><a href="/register">Registrate aca</a></p>
+                    <hr />
+                    <div className="d-grid gap-2">
+
+                    <button className='btn btn-primary' onClick={handleSignIn}>Iniciar sesión</button>
+                    </div>
                     </div>
                 </form>
-                </div>
-            </div>
         </div>
 
         </>

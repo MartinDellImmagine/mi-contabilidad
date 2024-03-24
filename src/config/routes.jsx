@@ -6,6 +6,8 @@ import LayoutPublic from "../Layouts/LayoutPublic";
 import LayoutPrivate from "../Layouts/LayoutPrivate"
 import App from "../pages/App";
 
+import Registro from "../pages/Registro";
+
 export const router = createBrowserRouter([
     {
       path: '/',
@@ -15,6 +17,10 @@ export const router = createBrowserRouter([
         {
           index: true,
           element: <Home />
+        },
+        {
+          path: "register",
+          element: <Registro />
         },
         {
           path: "/app",
