@@ -13,7 +13,6 @@ const Login = () => {
     
         const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
-        const [error, setError] = useState('');
         const navigate = useNavigate()
       
         const handleSignIn = async (e) => {
@@ -61,7 +60,7 @@ const Login = () => {
                     <p className='text-center'>Contrasena</p>
                     <input className='form-control' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-                    <p className='text-center' ><a onClick={navigate('/register')}>Registrate aca</a></p>
+                    <p className='text-center' ><button className='btn btn-link' onClick={()=>navigate('/register')}>Registrate aca</button></p>
                     <hr />
                     <div className="d-grid gap-2">
 

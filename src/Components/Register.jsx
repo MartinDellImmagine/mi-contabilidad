@@ -22,7 +22,7 @@ const Register = () => {
                 text: 'Usuario registrado con exito',
               })
             console.log(credentialUser);
-            navigate('/')
+            navigate('/app')
         } catch (error) {
             Swal.fire({
                 icon: 'error',
