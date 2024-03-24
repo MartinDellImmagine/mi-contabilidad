@@ -13,6 +13,7 @@ const Login = () => {
     
         const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
+
         const navigate = useNavigate()
       
         const handleSignIn = async (e) => {
@@ -26,6 +27,7 @@ const Login = () => {
                         title: 'Error',
                         text: 'Rellene los campos solicitados!',
                       })
+                      return
 
                 }
                 const credentialUser = await login({ email, password })
@@ -34,12 +36,13 @@ const Login = () => {
                 console.log(credentialUser);
                 console.log('logeado');
                 navigate('/app')
-            } catch (error) {
-                console.log(error);
+            } catch (e) {
+                console.log(e);
+    
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'Error al iniciar sesion',
+                    text: `${e}`
                   })
             }
         }
